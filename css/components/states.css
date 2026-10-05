@@ -1,0 +1,101 @@
+.state {
+  display: grid;
+  justify-items: center;
+  gap: var(--s-2);
+  padding: var(--s-6) var(--s-4);
+  text-align: center;
+}
+
+.state--loading {
+  grid-auto-flow: column;
+  justify-content: center;
+  color: var(--ink-2);
+}
+
+.state__icon {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+
+.state__icon--error {
+  background: var(--bad-soft);
+  color: var(--bad);
+}
+
+.state__title {
+  margin-top: var(--s-1);
+}
+
+.state__message {
+  max-width: 28rem;
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+}
+
+.state__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--s-2);
+  margin-top: var(--s-2);
+}
+
+.spinner {
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid var(--line-2);
+  border-top-color: var(--brand);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.skeleton-group {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.skeleton-card {
+  display: grid;
+  gap: var(--s-2);
+  padding: var(--s-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-2);
+}
+
+.skeleton-line {
+  display: block;
+  height: 0.8rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--line) 25%, var(--surface-2) 50%, var(--line) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+.skeleton-line--short {
+  width: 35%;
+}
+
+.skeleton-line--medium {
+  width: 65%;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}

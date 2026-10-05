@@ -1,0 +1,143 @@
+.card {
+  display: grid;
+  gap: var(--s-3);
+  padding: var(--s-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-1);
+}
+
+.card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s-3);
+}
+
+.card__subtitle {
+  margin-top: 2px;
+  font-size: 0.875rem;
+  color: var(--ink-2);
+}
+
+.card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+}
+
+.card--flat {
+  box-shadow: none;
+  background: var(--surface-2);
+}
+
+.card--warn {
+  border-color: color-mix(in srgb, var(--warn) 45%, var(--line));
+  background: var(--warn-soft);
+}
+
+.card--info {
+  background: var(--info-soft);
+  border-color: transparent;
+}
+
+.card--tight {
+  padding: 0;
+  gap: 0;
+}
+
+.card--tight > .card__header {
+  padding: var(--s-4) var(--s-4) var(--s-2);
+}
+
+.stat {
+  display: grid;
+  gap: 2px;
+  padding: var(--s-3) var(--s-4);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-2);
+  color: inherit;
+  text-decoration: none;
+}
+
+.stat--link:hover {
+  border-color: var(--line-2);
+  background: var(--surface-2);
+}
+
+.stat__label {
+  font-size: 0.8125rem;
+  color: var(--ink-2);
+}
+
+.stat__value {
+  font-size: 1.25rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.stat__value--large {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.stat__hint {
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+}
+
+.stat--warn .stat__value {
+  color: var(--warn);
+}
+
+.unit {
+  margin-left: 0.25em;
+  font-family: var(--font-sans);
+  font-size: 0.45em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: inherit;
+  opacity: 0.7;
+}
+
+.progress {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--line);
+}
+
+.progress__bar {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--brand);
+}
+
+.callout {
+  display: flex;
+  gap: var(--s-3);
+  padding: var(--s-3) var(--s-4);
+  border-radius: var(--radius-2);
+  background: var(--info-soft);
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.callout .icon {
+  flex: none;
+  margin-top: 2px;
+  color: var(--info);
+}
+
+.callout--warn {
+  background: var(--warn-soft);
+}
+
+.callout--warn .icon {
+  color: var(--warn);
+}

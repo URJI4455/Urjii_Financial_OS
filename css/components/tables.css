@@ -1,0 +1,55 @@
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table th,
+.table td {
+  padding: var(--s-2) var(--s-3);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.table th:first-child,
+.table td:first-child {
+  text-align: left;
+}
+
+.table thead th {
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  border-bottom: 1px solid var(--line-2);
+}
+
+.table tbody tr + tr td {
+  border-top: 1px solid var(--line);
+}
+
+.bars {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.bar-row {
+  display: grid;
+  gap: 4px;
+}
+
+.bar-row__head {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s-3);
+  font-size: 0.9rem;
+}
+
+.bar-row__name {
+  font-weight: 600;
+}
