@@ -1,0 +1,25 @@
+.expectation {
+  display: grid;
+  gap: var(--s-2);
+  padding: var(--s-3) var(--s-4);
+}
+
+.expectation + .expectation {
+  border-top: 1px solid var(--line);
+}
+
+.expectation__head {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s-3);
+  font-weight: 650;
+}
+
+.expectation__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--s-2);
+  font-size: 0.875rem;
+  color: var(--ink-2);
+}

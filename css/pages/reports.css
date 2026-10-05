@@ -1,0 +1,49 @@
+.period-bar {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.custom-range {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: var(--s-2);
+  align-items: end;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s-2);
+}
+
+.summary-grid .span-2 {
+  grid-column: 1 / -1;
+}
+
+.bar {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--line);
+}
+
+.bar__fill {
+  display: block;
+  height: 100%;
+  background: var(--brand);
+  border-radius: inherit;
+}
+
+.bar__fill--income {
+  background: var(--good);
+}
+
+@media (min-width: 900px) {
+  .summary-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .summary-grid .span-2 {
+    grid-column: span 2;
+  }
+}

@@ -1,0 +1,132 @@
+.hero {
+  display: grid;
+  gap: var(--s-4);
+  padding: var(--s-5) var(--s-4) var(--s-4);
+  border: 0;
+  border-radius: var(--radius-3);
+  background: linear-gradient(155deg, var(--brand) 0%, var(--brand-2) 100%);
+  color: var(--on-brand);
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--brand) 28%, transparent);
+}
+
+.hero__label {
+  font-size: 0.875rem;
+  opacity: 0.82;
+}
+
+.hero__block {
+  display: grid;
+  gap: 2px;
+}
+
+.hero__figure {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 9vw, 3rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.hero__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-4);
+  padding-top: var(--s-3);
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.hero__split > div {
+  display: grid;
+  gap: 2px;
+}
+
+.hero__small {
+  font-size: 1.25rem;
+  font-weight: 650;
+}
+
+.quick {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s-2);
+}
+
+.quick__button {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  min-height: 3.5rem;
+  padding: var(--s-2) var(--s-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-2);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: left;
+  box-shadow: var(--shadow-1);
+}
+
+.quick__button:nth-child(n + 3) {
+  grid-column: 1 / -1;
+}
+
+.quick__button:hover {
+  border-color: var(--line-2);
+  background: var(--surface-2);
+}
+
+.quick__button .icon {
+  flex: none;
+  color: var(--brand);
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s-2);
+}
+
+.tiles > :last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.dash-grid {
+  display: grid;
+  gap: var(--s-4);
+}
+
+.position-note {
+  font-size: 0.8125rem;
+  color: var(--ink-2);
+}
+
+@media (min-width: 900px) {
+  .dash-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .quick {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .quick__button:nth-child(n + 3) {
+    grid-column: auto;
+  }
+
+  .tiles > :last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+
+  .quick__button {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .tiles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

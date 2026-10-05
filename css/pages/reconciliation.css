@@ -1,0 +1,40 @@
+.check-card {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.check-card__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-3);
+}
+
+.expected {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.result {
+  display: grid;
+  gap: var(--s-2);
+  padding: var(--s-3);
+  border-radius: var(--radius-1);
+  background: var(--surface-2);
+}
+
+.result--ok {
+  background: var(--good-soft);
+}
+
+.result--diff {
+  background: var(--warn-soft);
+}
+
+.result__title {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-weight: 650;
+}

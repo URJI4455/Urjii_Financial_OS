@@ -1,0 +1,40 @@
+.loan {
+  display: grid;
+  gap: var(--s-2);
+  padding: var(--s-3) var(--s-4);
+}
+
+.loan + .loan {
+  border-top: 1px solid var(--line);
+}
+
+.loan__head {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s-3);
+  font-weight: 650;
+}
+
+.loan__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--s-2);
+  font-size: 0.875rem;
+  color: var(--ink-2);
+}
+
+.person-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-3);
+  padding: var(--s-3) var(--s-4);
+  background: var(--surface-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.person-head__name {
+  font-weight: 700;
+}
