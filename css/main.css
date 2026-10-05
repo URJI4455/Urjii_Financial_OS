@@ -1,0 +1,34 @@
+/*
+ * Urji Finance OS - stylesheet entry point.
+ * Order matters: tokens -> base -> layout -> components -> pages.
+ * Direction: calm and trustworthy. Warm paper background, deep green ink, serif numerals for headline
+ * figures, generous spacing, hairline borders, no decoration that does not carry meaning.
+ */
+
+@import url("base/tokens.css");
+@import url("base/reset.css");
+@import url("base/typography.css");
+
+@import url("layout/app-shell.css");
+@import url("layout/navigation.css");
+
+@import url("components/buttons.css");
+@import url("components/cards.css");
+@import url("components/lists.css");
+@import url("components/forms.css");
+@import url("components/tables.css");
+@import url("components/badges.css");
+@import url("components/states.css");
+@import url("components/modal.css");
+@import url("components/toast.css");
+
+@import url("pages/dashboard.css");
+@import url("pages/transactions.css");
+@import url("pages/money.css");
+@import url("pages/reports.css");
+@import url("pages/more.css");
+@import url("pages/income.css");
+@import url("pages/receivables.css");
+@import url("pages/reconciliation.css");
+@import url("pages/sop.css");
+@import url("pages/settings.css");
